@@ -12,6 +12,30 @@ Terminal 3D wireframe polyhedron viewer written in Rust. Renders rotating polyhe
 - Runtime resize/terminal zoom handling (frame is recomputed from current `cols × rows`)
 - `--dump` mode to render a single frame to stdout without TTY/raw mode (useful for debugging)
 
+## Requirements
+
+- **Rust toolchain** (stable, edition 2021) — install via [rustup](https://rustup.rs/): `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+- A terminal with UTF-8 and Braille/Unicode font support (most modern terminals)
+
+Rust crate dependencies (`crossterm`, `clap`) are declared in `Cargo.toml`/`Cargo.lock` and are **fetched automatically by Cargo** during build — no manual dependency download is needed.
+
+## Install / Download & Run
+
+```bash
+# 1) Clone
+git clone https://github.com/Zisvit/terminal-polyhedron.git
+cd terminal-polyhedron
+
+# 2) Build
+cargo build --release
+
+# 3) Run
+./target/release/terminal-polyhedron
+# or install into your Cargo bin:
+# cargo install --path .
+# terminal-polyhedron
+```
+
 ## Build
 
 ```bash
